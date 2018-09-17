@@ -1,6 +1,6 @@
 QT += core network gui widgets
 
-DBLIBS += zeiterfassungcore zeiterfassunggui
+DBLIBS += dbcore zeiterfassungcore zeiterfassunggui
 
 TARGET = advancedviewplugin
 

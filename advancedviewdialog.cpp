@@ -15,7 +15,7 @@
 
 #include "stripswidget.h"
 #include "mainwindow.h"
-#include "timeutils.h"
+#include "utils/timeutils.h"
 #include "dialogs/bookingdialog.h"
 #include "dialogs/timeassignmentdialog.h"
 #include "models/bookingsmodel.h"
