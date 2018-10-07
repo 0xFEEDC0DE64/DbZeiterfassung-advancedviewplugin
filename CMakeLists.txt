@@ -26,4 +26,4 @@ set(FORMS
 
 add_library(advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${FORMS})
 
-target_link_libraries(advancedviewplugin Qt5::Core Qt5::Gui Qt5::Widgets zeiterfassungguilib)
+target_link_libraries(advancedviewplugin Qt5::Core Qt5::Gui Qt5::Widgets zeiterfassungguilib zeiterfassungnetworklib)
