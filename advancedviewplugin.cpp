@@ -6,6 +6,8 @@
 #include <QLocale>
 #include <QBoxLayout>
 
+#include "utils/fileutils.h"
+
 #include "mainwindow.h"
 #include "stripswidget.h"
 
@@ -16,9 +18,7 @@ AdvancedViewPlugin::AdvancedViewPlugin(QObject *parent) :
 {
     qDebug() << "called";
 
-    static auto dir = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath(QStringLiteral("translations"));
-
-    if(m_translator.load(QLocale(), QStringLiteral("advancedviewplugin"), QStringLiteral("_"), dir))
+    if(m_translator.load(QLocale(), QStringLiteral("advancedviewplugin"), QStringLiteral("_"), translationsDir()))
     {
         if(!QCoreApplication::installTranslator(&m_translator))
         {

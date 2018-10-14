@@ -28,7 +28,13 @@ set(FORMS
     dialogs/timeassignmentdialog.ui
 )
 
-add_library(zeiterfassung-plugins-advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${RESOURCES} ${FORMS})
+set(OTHER_FILES
+    advancedviewplugin.json
+)
+
+add_library(zeiterfassung-plugins-advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${RESOURCES} ${FORMS} ${OTHER_FILES})
+
+set_target_properties(zeiterfassung-plugins-advancedviewplugin PROPERTIES OUTPUT_NAME advancedviewplugin PREFIX "")
 
 target_link_libraries(zeiterfassung-plugins-advancedviewplugin Qt5::Core Qt5::Gui Qt5::Widgets zeiterfassungguilib zeiterfassungnetworklib)
 
