@@ -18,12 +18,18 @@ set(SOURCES
     models/timeassignmentsmodel.cpp
 )
 
+set(RESOURCES
+    advancedviewplugin_resources.qrc
+)
+
 set(FORMS
     advancedviewdialog.ui
     dialogs/bookingdialog.ui
     dialogs/timeassignmentdialog.ui
 )
 
-add_library(advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${FORMS})
+add_library(zeiterfassung-plugins-advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${RESOURCES} ${FORMS})
 
-target_link_libraries(advancedviewplugin Qt5::Core Qt5::Gui Qt5::Widgets zeiterfassungguilib zeiterfassungnetworklib)
+target_link_libraries(zeiterfassung-plugins-advancedviewplugin Qt5::Core Qt5::Gui Qt5::Widgets zeiterfassungguilib zeiterfassungnetworklib)
+
+add_dependencies(zeiterfassung-plugins zeiterfassung-plugins-advancedviewplugin)
