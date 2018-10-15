@@ -18,21 +18,30 @@ set(SOURCES
     models/timeassignmentsmodel.cpp
 )
 
-set(RESOURCES
-    advancedviewplugin_resources.qrc
-)
-
 set(FORMS
     advancedviewdialog.ui
     dialogs/bookingdialog.ui
     dialogs/timeassignmentdialog.ui
 )
 
+set(RESOURCES
+    advancedviewplugin_resources.qrc
+)
+
 set(OTHER_FILES
     advancedviewplugin.json
 )
 
-add_library(zeiterfassung-plugins-advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${RESOURCES} ${FORMS} ${OTHER_FILES})
+set(TRANSLATIONS
+    translations/advancedviewplugin_en.ts
+    translations/advancedviewplugin_de.ts
+)
+
+set_source_files_properties(${TRANSLATIONS} PROPERTIES OUTPUT_LOCATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/translations)
+QT5_CREATE_TRANSLATION(TRANSLATIONS_C ${TRANSLATIONS} ${HEADERS} ${SOURCES} ${FORMS} OPTIONS -no-obsolete)
+#QT5_ADD_TRANSLATION(TRANSLATIONS_C ${TRANSLATIONS})
+
+add_library(zeiterfassung-plugins-advancedviewplugin SHARED ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES} ${OTHER_FILES} ${TRANSLATIONS_C})
 
 set_target_properties(zeiterfassung-plugins-advancedviewplugin PROPERTIES OUTPUT_NAME advancedviewplugin PREFIX "")
 
