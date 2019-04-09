@@ -59,32 +59,32 @@
         <translation>Kontierungen aktualisieren</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="191"/>
+        <location filename="../advancedviewdialog.cpp" line="190"/>
         <source>Could not create time assignment!</source>
         <translation>Konnte Kontierung nicht erstellen!</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="206"/>
+        <location filename="../advancedviewdialog.cpp" line="205"/>
         <source>Edit time assignment</source>
         <translation>Kontierung bearbeiten</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="207"/>
+        <location filename="../advancedviewdialog.cpp" line="206"/>
         <source>Delete time assignment</source>
         <translation>Kontierung löschen</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="242"/>
+        <location filename="../advancedviewdialog.cpp" line="239"/>
         <source>Could not edit time assignment!</source>
         <translation>Konnte Kontierung nicht bearbeiten!</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="250"/>
+        <location filename="../advancedviewdialog.cpp" line="247"/>
         <source>Do you really want to delete the time assignment?</source>
         <translation>Möchten Sie die Kontierung wirklich löschen?</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="264"/>
+        <location filename="../advancedviewdialog.cpp" line="261"/>
         <source>Could not delete time assignment!</source>
         <translation>Konnte Kontierung nicht löschen!</translation>
     </message>
@@ -179,16 +179,11 @@
     </message>
     <message>
         <location filename="../dialogs/timeassignmentdialog.ui" line="70"/>
-        <source>Subproject:</source>
-        <translation>Subprojekt:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="77"/>
         <source>Workpackage:</source>
         <translation>Arbeitspaket:</translation>
     </message>
     <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="84"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="77"/>
         <source>Text:</source>
         <translation>Text:</translation>
     </message>
@@ -202,37 +197,32 @@
 <context>
     <name>TimeAssignmentsModel</name>
     <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="72"/>
+        <location filename="../models/timeassignmentsmodel.cpp" line="71"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="73"/>
+        <location filename="../models/timeassignmentsmodel.cpp" line="72"/>
         <source>Time</source>
         <translation>Zeit</translation>
     </message>
     <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="74"/>
+        <location filename="../models/timeassignmentsmodel.cpp" line="73"/>
         <source>Timespan</source>
         <translation>Zeitspanne</translation>
     </message>
     <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="75"/>
+        <location filename="../models/timeassignmentsmodel.cpp" line="74"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="76"/>
-        <source>Subproject</source>
-        <translation>Subprojekt</translation>
-    </message>
-    <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="77"/>
+        <location filename="../models/timeassignmentsmodel.cpp" line="75"/>
         <source>Workpackage</source>
         <translation>Arbeitspaket</translation>
     </message>
     <message>
-        <location filename="../models/timeassignmentsmodel.cpp" line="78"/>
+        <location filename="../models/timeassignmentsmodel.cpp" line="76"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>

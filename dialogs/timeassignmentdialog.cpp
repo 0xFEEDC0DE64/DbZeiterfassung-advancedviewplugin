@@ -36,10 +36,6 @@ TimeAssignmentDialog::TimeAssignmentDialog(const QMap<QString, QString> &project
         }
     }
 
-    for(const auto &subproject : settings.subprojects())
-        ui->comboBoxSubproject->addItem(subproject);
-    ui->comboBoxSubproject->clearEditText();
-
     for(const auto &workpackage : settings.workpackages())
         ui->comboBoxWorkpackage->addItem(workpackage);
     ui->comboBoxWorkpackage->clearEditText();
@@ -86,16 +82,6 @@ void TimeAssignmentDialog::setProject(const QString &project)
         ui->comboBoxProject->setCurrentIndex(index);
     else
         qWarning() << "could not find project" << project;
-}
-
-QString TimeAssignmentDialog::getSubproject() const
-{
-    return ui->comboBoxSubproject->currentText();
-}
-
-void TimeAssignmentDialog::setSubproject(const QString &subproject)
-{
-    ui->comboBoxSubproject->setCurrentText(subproject);
 }
 
 QString TimeAssignmentDialog::getWorkpackage() const

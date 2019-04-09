@@ -175,7 +175,6 @@ void AdvancedViewDialog::contextMenuTimeAssignment(const QPoint &pos)
                     dialog.getTime(),
                     dialog.getTimespan(),
                     dialog.getProject(),
-                    dialog.getSubproject(),
                     dialog.getWorkpackage(),
                     dialog.getText()
                 );
@@ -213,7 +212,6 @@ void AdvancedViewDialog::contextMenuTimeAssignment(const QPoint &pos)
             dialog.setTime(timeAssignment.time);
             dialog.setTimespan(timeAssignment.timespan);
             dialog.setProject(timeAssignment.project);
-            dialog.setSubproject(timeAssignment.subproject);
             dialog.setWorkpackage(timeAssignment.workpackage);
             dialog.setText(timeAssignment.text);
             again1:
@@ -226,7 +224,6 @@ void AdvancedViewDialog::contextMenuTimeAssignment(const QPoint &pos)
                     dialog.getTime(),
                     dialog.getTimespan(),
                     dialog.getProject(),
-                    dialog.getSubproject(),
                     dialog.getWorkpackage(),
                     dialog.getText()
                 );

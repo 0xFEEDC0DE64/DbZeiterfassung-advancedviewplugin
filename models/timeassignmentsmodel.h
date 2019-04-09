@@ -12,6 +12,10 @@ class TimeAssignmentsModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(bool enabled READ enabled NOTIFY enabledChanged)
 
+    enum Columns {
+        Id, Time, Timespan, Project, Workpackage, Text, Count
+    };
+
 public:
     explicit TimeAssignmentsModel(StripsWidget &stripsWidget, QObject *parent = Q_NULLPTR);
 

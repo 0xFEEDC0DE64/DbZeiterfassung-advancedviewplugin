@@ -28,9 +28,6 @@ public:
     QString getProject() const;
     void setProject(const QString &project);
 
-    QString getSubproject() const;
-    void setSubproject(const QString &subproject);
-
     QString getWorkpackage() const;
     void setWorkpackage(const QString &workpackage);
 

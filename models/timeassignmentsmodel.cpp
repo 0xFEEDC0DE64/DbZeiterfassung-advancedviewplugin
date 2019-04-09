@@ -31,7 +31,7 @@ int TimeAssignmentsModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
 
-    return 7;
+    return Columns::Count;
 }
 
 QVariant TimeAssignmentsModel::data(const QModelIndex &index, int role) const
@@ -45,13 +45,12 @@ QVariant TimeAssignmentsModel::data(const QModelIndex &index, int role) const
     case Qt::EditRole:
         switch(index.column())
         {
-        case 0: return timeAssignment.id;
-        case 1: return timeAssignment.time;
-        case 2: return timeAssignment.timespan;
-        case 3: return timeAssignment.project;
-        case 4: return timeAssignment.subproject;
-        case 5: return timeAssignment.workpackage;
-        case 6: return timeAssignment.text;
+        case Columns::Id:          return timeAssignment.id;
+        case Columns::Time:        return timeAssignment.time;
+        case Columns::Timespan:    return timeAssignment.timespan;
+        case Columns::Project:     return timeAssignment.project;
+        case Columns::Workpackage: return timeAssignment.workpackage;
+        case Columns::Text:        return timeAssignment.text;
         }
     }
 
@@ -69,13 +68,12 @@ QVariant TimeAssignmentsModel::headerData(int section, Qt::Orientation orientati
         case Qt::EditRole:
             switch(section)
             {
-            case 0: return tr("ID");
-            case 1: return tr("Time");
-            case 2: return tr("Timespan");
-            case 3: return tr("Project");
-            case 4: return tr("Subproject");
-            case 5: return tr("Workpackage");
-            case 6: return tr("Text");
+            case Columns::Id:          return tr("ID");
+            case Columns::Time:        return tr("Time");
+            case Columns::Timespan:    return tr("Timespan");
+            case Columns::Project:     return tr("Project");
+            case Columns::Workpackage: return tr("Workpackage");
+            case Columns::Text:        return tr("Text");
             }
         }
     default:
