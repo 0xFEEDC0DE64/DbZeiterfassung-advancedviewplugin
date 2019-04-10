@@ -1,11 +1,8 @@
 #pragma once
 
-#include <QTime>
-
 #include "zeiterfassungdialog.h"
 
-template <class Key, class T> class QMap;
-
+class ProjectsModel;
 class ZeiterfassungSettings;
 
 namespace Ui { class TimeAssignmentDialog; }
@@ -15,8 +12,7 @@ class TimeAssignmentDialog : public ZeiterfassungDialog
     Q_OBJECT
 
 public:
-    explicit TimeAssignmentDialog(const QMap<QString, QString> &projects, const ZeiterfassungSettings &settings,
-                                  QWidget *parent = Q_NULLPTR);
+    explicit TimeAssignmentDialog(ProjectsModel &projectsModel, const ZeiterfassungSettings &settings, QWidget *parent = Q_NULLPTR);
     ~TimeAssignmentDialog();
 
     QTime getTime() const;
@@ -26,10 +22,8 @@ public:
     void setTimespan(const QTime &timespan);
 
     QString getProject() const;
-    void setProject(const QString &project);
-
     QString getWorkpackage() const;
-    void setWorkpackage(const QString &workpackage);
+    void setProject(const QString &project, const QString &workpackage);
 
     QString getText() const;
     void setText(const QString &text);

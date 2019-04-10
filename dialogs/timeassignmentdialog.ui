@@ -10,12 +10,6 @@
     <height>307</height>
    </rect>
   </property>
-  <property name="maximumSize">
-   <size>
-    <width>16777215</width>
-    <height>0</height>
-   </size>
-  </property>
   <property name="windowTitle">
    <string>Time assignment</string>
   </property>
@@ -44,6 +38,13 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="1">
+      <widget class="QTimeEdit" name="timeEditTime">
+       <property name="displayFormat">
+        <string notr="true">HH:mm:ss</string>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="labelTimespan">
        <property name="text">
@@ -51,6 +52,13 @@
        </property>
        <property name="buddy">
         <cstring>timeEditTimespan</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QTimeEdit" name="timeEditTimespan">
+       <property name="displayFormat">
+        <string notr="true">HH:mm:ss</string>
        </property>
       </widget>
      </item>
@@ -64,48 +72,17 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="labelWorkpackage">
-       <property name="text">
-        <string>Workpackage:</string>
-       </property>
-      </widget>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBoxProject"/>
      </item>
-     <item row="4" column="0">
+     <item row="3" column="0">
       <widget class="QLabel" name="labelText">
        <property name="text">
         <string>Text:</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QTimeEdit" name="timeEditTime">
-       <property name="displayFormat">
-        <string notr="true">HH:mm:ss</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QTimeEdit" name="timeEditTimespan">
-       <property name="displayFormat">
-        <string notr="true">HH:mm:ss</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="comboBoxProject"/>
-     </item>
      <item row="3" column="1">
-      <widget class="QComboBox" name="comboBoxWorkpackage">
-       <property name="editable">
-        <bool>true</bool>
-       </property>
-       <property name="insertPolicy">
-        <enum>QComboBox::NoInsert</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
       <widget class="QComboBox" name="comboBoxText">
        <property name="editable">
         <bool>true</bool>

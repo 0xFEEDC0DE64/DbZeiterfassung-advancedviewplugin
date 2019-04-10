@@ -5,40 +5,16 @@
 #include <QStringBuilder>
 #include <QDebug>
 
+#include "projectsmodel.h"
 #include "zeiterfassungsettings.h"
 
-TimeAssignmentDialog::TimeAssignmentDialog(const QMap<QString, QString> &projects, const ZeiterfassungSettings &settings,
-                                   QWidget *parent) :
+TimeAssignmentDialog::TimeAssignmentDialog(ProjectsModel &projectsModel, const ZeiterfassungSettings &settings, QWidget *parent) :
     ZeiterfassungDialog(parent),
     ui(new Ui::TimeAssignmentDialog)
 {
     ui->setupUi(this);
 
-    {
-        for(const auto &preferedProject : settings.projects())
-        {
-            if(!projects.contains(preferedProject))
-            {
-                qWarning() << "cannot find project" << preferedProject;
-                continue;
-            }
-
-            ui->comboBoxProject->addItem(tr("%0 (%1)").arg(projects.value(preferedProject)).arg(preferedProject), preferedProject);
-        }
-
-        if(settings.projects().count())
-            ui->comboBoxProject->insertSeparator(ui->comboBoxProject->count());
-
-        for(auto iter = projects.constBegin(); iter != projects.constEnd(); iter++)
-        {
-            if(!settings.projects().contains(iter.key()))
-                ui->comboBoxProject->addItem(tr("%0 (%1)").arg(iter.value()).arg(iter.key()), iter.key());
-        }
-    }
-
-    for(const auto &workpackage : settings.workpackages())
-        ui->comboBoxWorkpackage->addItem(workpackage);
-    ui->comboBoxWorkpackage->clearEditText();
+    ui->comboBoxProject->setModel(&projectsModel);
 
     for(const auto &text : settings.texts())
         ui->comboBoxText->addItem(text);
@@ -72,26 +48,17 @@ void TimeAssignmentDialog::setTimespan(const QTime &timespan)
 
 QString TimeAssignmentDialog::getProject() const
 {
-    return ui->comboBoxProject->currentData().toString();
-}
-
-void TimeAssignmentDialog::setProject(const QString &project)
-{
-    auto index = ui->comboBoxProject->findData(project);
-    if(index >= 0)
-        ui->comboBoxProject->setCurrentIndex(index);
-    else
-        qWarning() << "could not find project" << project;
+    return ui->comboBoxProject->currentData(Qt::UserRole).toString();
 }
 
 QString TimeAssignmentDialog::getWorkpackage() const
 {
-    return ui->comboBoxWorkpackage->currentText();
+    return ui->comboBoxProject->currentData(Qt::EditRole).toString();
 }
 
-void TimeAssignmentDialog::setWorkpackage(const QString &workpackage)
+void TimeAssignmentDialog::setProject(const QString &project, const QString &workpackage)
 {
-    ui->comboBoxWorkpackage->setCurrentText(workpackage);
+    qCritical() << "not implemented";
 }
 
 QString TimeAssignmentDialog::getText() const

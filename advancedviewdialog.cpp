@@ -164,7 +164,7 @@ void AdvancedViewDialog::contextMenuTimeAssignment(const QPoint &pos)
         auto selectedAction = menu.exec(ui->timeAssignmentsView->viewport()->mapToGlobal(pos));
         if(selectedAction == createAction)
         {
-            TimeAssignmentDialog dialog(m_stripsWidget.mainWindow().projects(),
+            TimeAssignmentDialog dialog(m_stripsWidget.mainWindow().projectsModel(),
                                         m_stripsWidget.mainWindow().settings(), this);
             again2:
             if(dialog.exec() == QDialog::Accepted)
@@ -207,12 +207,11 @@ void AdvancedViewDialog::contextMenuTimeAssignment(const QPoint &pos)
         auto selectedAction = menu.exec(ui->timeAssignmentsView->viewport()->mapToGlobal(pos));
         if(selectedAction == editAction)
         {
-            TimeAssignmentDialog dialog(m_stripsWidget.mainWindow().projects(),
+            TimeAssignmentDialog dialog(m_stripsWidget.mainWindow().projectsModel(),
                                         m_stripsWidget.mainWindow().settings(), this);
             dialog.setTime(timeAssignment.time);
             dialog.setTimespan(timeAssignment.timespan);
-            dialog.setProject(timeAssignment.project);
-            dialog.setWorkpackage(timeAssignment.workpackage);
+            dialog.setProject(timeAssignment.project, timeAssignment.workpackage);
             dialog.setText(timeAssignment.text);
             again1:
             if(dialog.exec() == QDialog::Accepted)

@@ -74,17 +74,17 @@
         <translation>Kontierung löschen</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="239"/>
+        <location filename="../advancedviewdialog.cpp" line="238"/>
         <source>Could not edit time assignment!</source>
         <translation>Konnte Kontierung nicht bearbeiten!</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="247"/>
+        <location filename="../advancedviewdialog.cpp" line="246"/>
         <source>Do you really want to delete the time assignment?</source>
         <translation>Möchten Sie die Kontierung wirklich löschen?</translation>
     </message>
     <message>
-        <location filename="../advancedviewdialog.cpp" line="261"/>
+        <location filename="../advancedviewdialog.cpp" line="260"/>
         <source>Could not delete time assignment!</source>
         <translation>Konnte Kontierung nicht löschen!</translation>
     </message>
@@ -157,41 +157,30 @@
 <context>
     <name>TimeAssignmentDialog</name>
     <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="20"/>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="31"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="14"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="25"/>
         <source>Time assignment</source>
         <translation>Kontierung</translation>
     </message>
     <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="40"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="34"/>
         <source>Time:</source>
         <translation>Zeit:</translation>
     </message>
     <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="50"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="51"/>
         <source>Timespan:</source>
         <translation>Zeitspanne:</translation>
     </message>
     <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="60"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="68"/>
         <source>Project:</source>
         <translation>Projekt:</translation>
     </message>
     <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="70"/>
-        <source>Workpackage:</source>
-        <translation>Arbeitspaket:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/timeassignmentdialog.ui" line="77"/>
+        <location filename="../dialogs/timeassignmentdialog.ui" line="81"/>
         <source>Text:</source>
         <translation>Text:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/timeassignmentdialog.cpp" line="26"/>
-        <location filename="../dialogs/timeassignmentdialog.cpp" line="35"/>
-        <source>%0 (%1)</source>
-        <translation>%0 (%1)</translation>
     </message>
 </context>
 <context>
